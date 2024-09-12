@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register - Food Ordering App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- Registration Form -->
+    <div class="container mt-5">
+      <h2 class="text-center">Register</h2>
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            placeholder="Enter your password"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="confirmPassword"
+            placeholder="Confirm your password"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">
+          Register
+        </button>
+        <p class="text-center mt-3">
+          Already have an account? <a href="login.html">Login here</a>
+        </p>
+      </form>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+      document
+        .getElementById("registerForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const name = document.getElementById("name").value;
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const confirmPassword =
+            document.getElementById("confirmPassword").value;
+
+          if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return;
+          }
+
+          if (
+            localStorage.getItem("registered") === "true" &&
+            localStorage.getItem("email") === email &&
+            localStorage.getItem("password") === password
+          ) {
+            alert("Already Registered");
+            // Redirect to the home page
+            window.location.href = "index.html";
+          } else {
+            // Simulate registration success
+            alert("Registration successful");
+            // Set the flag to indicate user is registered
+            localStorage.setItem("registered", "true");
+            localStorage.setItem("email", email);
+            localStorage.setItem("password", password);
+            window.location.href = "login.html";
+          }
+        });
+    </script>
+  </body>
+</html>

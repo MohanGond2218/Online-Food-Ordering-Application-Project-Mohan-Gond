@@ -1,0 +1,42 @@
+/* Basic styling for the layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+#menuItems .card {
+  margin: 10px 0;
+}
+
+#cartItems {
+  min-height: 150px;
+}
+
+#checkoutBtn {
+  width: 100%;
+}
+span {
+  color: rgb(145, 255, 0);
+  font-size: 24px;
+}
+
+#menu-heading {
+  background-color: rgb(64, 227, 227);
+  color: black;
+}
+
+#cart-heading {
+  background-color: rgb(222, 170, 198);
+  color: black;
+}
+
+/* Media queries for responsiveness */
+@media (min-width: 576px) {
+  #menuItems .col-sm-6 {
+    margin-bottom: 20px;
+  }
+}
