@@ -41,17 +41,34 @@
       </nav>
       <!-- Main Content -->
     <div class="container">
+
+  
         <!-- Menu Section -->
         <section id="menu" class="my-5">
-          <h2 class="text-center" id="menu-heading">Menu Section</h2>
+            <div id="menu-heading" style="align-items: center; align-content: center;">
+          
+            <!-- Filter and Heading Section -->
+        <div class="d-flex justify-content-between align-items-center p-3" id="food-filter">
+            <h2 class="menu-heading">Menu Section</h2>
+            <select id="categoryFilter" class="form-control w-auto">
+                <option value="all">All</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="non-vegetarian">Non-Vegetarian</option>
+                <option value="desserts">Desserts</option>
+            </select>
+        </div>
+
+        </div>
           <div class="row" id="menuItems">
             <!-- Menu items will be populated by JavaScript -->
           </div>
+     
+  
         </section>
   
         <!-- Cart Section -->
-        <section id="cart" class="my-5">
-          <h2 class="text-center" id="cart-heading">Cart Section</h2>
+        <section id="cart" class="my-5 ">
+          <h2 class="d-flex justify-content-between align-items-center p-3" id="cart-heading">Cart Section</h2>
           <div id="cartItems" class="border p-3">
             <p>Your cart is empty</p>
           </div>

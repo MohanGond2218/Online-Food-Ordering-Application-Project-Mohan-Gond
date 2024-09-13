@@ -30,8 +30,20 @@ span {
 }
 
 #cart-heading {
-  background-color: rgb(222, 170, 198);
+  background-color: rgb(64, 227, 227);
   color: black;
+}
+
+#food-filter {
+  border-radius: 5px; /* Optional: Add some border radius */
+}
+
+#food-filter .menu-heading {
+  margin: 0; /* To make sure heading aligns properly */
+}
+
+#categoryFilter {
+  width: 200px; /* Adjust the width of the filter dropdown */
 }
 
 /* Media queries for responsiveness */
